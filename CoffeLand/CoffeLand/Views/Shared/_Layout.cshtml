@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CoffeLand</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <div id="menu-btn1" class="fas fa-bars"></div>
+
+        <a href="#" class="logo" style="text-decoration:none;"> coffee <i class="fas fa-mug-hot"></i> </a>
+
+        <nav class="navbar1">
+            <a asp-area="" asp-controller="Coffes" asp-action="Index2" style="text-decoration:none;" >Trang chủ</a>
+            <a asp-area="" asp-controller="Home" asp-action="About" style="text-decoration:none;">Hỏi đáp</a>
+            <a href="#menu" style="text-decoration:none;">Menu</a>
+            <a href="#review" style="text-decoration:none;">Review</a>
+            <a asp-area="" asp-controller="Home" asp-action="Privacy" style="text-decoration:none;">Privacy</a>
+        </nav>
+
+            <a href="#" class="btn1" style="text-decoration:none;">Đặt bàn</a>
+
+    </header>
+
+    <!-- header section ends -->
+
+
+    <div >
+        <main role="main" >
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - CoffeLand - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
